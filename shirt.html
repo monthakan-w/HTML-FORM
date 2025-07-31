@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <meta name="author" content="monthakan thepsit">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CS STORE</title>
+    <link rel="stylesheet" href="/form.css/cs-form-style.css">
+</head>
+
+<body>
+    <header>
+    <!-- หัวข้อ แบบปกติ-->
+    <div class="div1 flex-col md:flex-row md:items-center md:justify-between">
+        <a class="cs-store text-4xl flex items-center space-x" href="index_cs-store.html">
+            <span>CS STORE</span>
+            <img src="/image/logo.png" alt="logo" width="70" height="70">
+        </a>
+        <a class="log-out text-xl  hidden md:flex" href="log-in.html">Log out</a>
+    </div>
+    
+    <!-- หัวข้อเมนู --> 
+    <nav class="p-4 relative ">
+        <div class="relative flex items-center justify-between">
+        <!-- ช่องค้นหา -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <form class="flex-1 flex justify-start ml-2 mr-4 md:flex" action="#" method="post">
+            <input type="text" name="search" placeholder="search..."
+            class="border border-gray-00 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-800 w-40 md:w-64"/>
+            <button type="submit" class="ml-1 px-2 bg-blue-900 text-white rounded-lg hover:bg-blue-500 transition">
+                ค้นหา
+            </button>
+        <!-- มือถือ --> 
+        </form>
+        <!-- ปุ่มแฮมเบอร์เกอร์ -->
+        <label for="menu-toggle" class="md:hidden cursor-pointer z-50 relative">
+            <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </label>
+        <!-- ปุ่มปิดเมนู (X) -->
+        <label for="menu-toggle" 
+            class="fixed top-6 right-6 z-[101] bg-white/90 rounded-full p-2 shadow-lg cursor-pointer transition-all duration-300 opacity-0 pointer-events-none
+            peer-checked:opacity-100 peer-checked:pointer-events-auto md:hidden">
+            <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="6" y1="18" x2="18" y2="6"></line>
+            </svg>
+        </label>
+
+    <!-- เมนู -->
+        <ul class="mobile-menu fixed top-0 left-0 w-full bg-white p-6 space-y-4 text-xl shadow-md
+        -translate-y-full opacity-0 pointer-events-none transition-all duration-300 
+        peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:pointer-events-auto md:hidden z-50">
+            <li><a href="index_cs-store.html" class="block px-2 py-1 hover:bg-blue-100 rounded">หน้าแรก</a></li>
+            <li><a href="shirt.html" class="block px-2 py-1 hover:bg-blue-100 rounded">เสื้อ</a></li>
+            <li><a href="bag.html" class="block px-2 py-1 hover:bg-blue-100 rounded">กระเป๋า</a></li>
+            <li><a href="glass.html" class="block px-2 py-1 hover:bg-blue-100 rounded">แก้วน้ำ</a></li>
+            <li><a href="hat.html" class="block px-2 py-1 hover:bg-blue-100 rounded">หมวก</a></li>
+            <li><a href="umbrella.html" class="block px-2 py-1 hover:bg-blue-100 rounded">ร่ม</a></li>
+            <li><a href="brooch.html" class="block px-2 py-1 hover:bg-blue-100 rounded">เข็มกลัด</a></li>
+            <li><a href="book.html" class="block px-2 py-1 hover:bg-blue-100 rounded">สมุด</a></li>
+            <li><a href="pen.html" class="block px-2 py-1 hover:bg-blue-100 rounded">ปากกา</a></li>
+            <li><a href="log-in-admin.html" class="block px-2 py-1 hover:bg-blue-100 rounded">เพิ่มรายการสินค้า</a></li>
+            <li><a href="log-in.html" class="block px-2 py-1 hover:bg-blue-100 rounded">Log out</a></li>
+        </ul>
+
+
+    <!-- คอม -->  
+        <ul class="hidden md:flex items-center space-x-6 text-xl mt-3">
+          <li><a href="shirt.html" class="hover:text-blue-500 transition-colors duration-200">เสื้อ</a></li>
+          <li><a href="bag.html" class="hover:text-blue-500 transition-colors duration-200">กระเป๋า</a></li>
+          <li><a href="glass.html" class="hover:text-blue-500 transition-colors duration-200">แก้วน้ำ</a></li>
+          <li><a href="hat.html" class="hover:text-blue-500 transition-colors duration-200">หมวก</a></li>
+          <li><a href="umbrella.html" class="hover:text-blue-500 transition-colors duration-200">ร่ม</a></li>
+          <li><a href="brooch.html" class="hover:text-blue-500 transition-colors duration-200">เข็มกลัด</a></li>
+          <li><a href="book.html" class="hover:text-blue-500 transition-colors duration-200">สมุด</a></li>
+          <li><a href="pen.html" class="hover:text-blue-500 transition-colors duration-200">ปากกา</a></li>
+          <li><a href="log-in-admin.html" class="hover:text-blue-500 transition-colors duration-200">เพิ่มรายการสินค้า</a></li>
+        </ul>   
+    </nav>
+    </header>
+
+    <main>
+        <div>
+            <div class="flex flex-col md:flex-row  rounded-lg shadow-lg p-6 max-w-6xl mx-auto mt-8">
+                <!-- เสื้อ -->
+                <div class="md:w-1/2 flex flex-col items-center">
+                    <img src="/image/shirt.png" alt="เสื้อ" class="w-[400px] h-[400px] object-cover rounded-lg shadow mb-4">
+                    <div class="text-2xl font-bold text-blue-900 mb-2">฿ 250</div>
+                    <div class="text-gray-700 mb-2">สินค้าในคลัง: <span class="font-semibold">100 ชิ้น</span></div>
+                    <div class="text-gray-600 text-sm">
+                    เสื้อยืด CS STORE ออกแบบมาเพื่อให้ความรู้สึกเรียบง่ายแต่มีสไตล์ ด้วยลายพิมพ์โลโก้ CS STORE ด้านหน้า
+                    เป็นสัญลักษณ์ที่สื่อถึงความคิดสร้างสรรค์ของนักศึกษาคณะวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้
+                    ผลิตจากผ้าฝ้ายแท้ 100% เนื้อผ้านุ่ม ใส่สบาย ระบายอากาศได้ดี เหมาะกับสภาพอากาศเมืองไทย ไม่ว่าจะใส่เที่ยว
+                    ใส่ทำกิจกรรม หรือใส่ในชีวิตประจำวัน งานตัดเย็บคุณภาพดี เย็บตะเข็บคู่รอบคอและแขน ทำให้ทนทานต่อการใช้งาน
+                    ไม่ย้วยง่าย ลายพิมพ์ใช้เทคโนโลยีดิจิทัล สีคมชัด ไม่ลอกแม้ซักหลายครั้ง<br>
+                        <strong>คุณสมบัติ :</strong><br>
+                        <ol class="list-decimal list-inside"></ol>
+                            <li>เนื้อผ้า Cotton 100% ใส่สบาย ระบายอากาศได้ดี</li>
+                            <li>เย็บตะเข็บคู่ แข็งแรง ทนทาน ไม่ย้วยง่าย</li>
+                            <li>มีหลากหลายสี พร้อมลายพิมพ์โลโก้ CS STORE ด้านหน้า</li>
+                            <li>งานพิมพ์ลายระบบดิจิทัล สีชัด ไม่หลุดลอกง่าย</li>
+                            <li>เหมาะสำหรับใส่ทำกิจกรรมทั่วไป หรือใส่เป็นของที่ระลึก</li>
+                        </ol><br>
+                        <strong>ขนาดกระเป๋า :</strong>
+                        <ol class="list-decimal list-inside"></ol>
+                            <li>S  : 36" x 26"</li>
+                            <li>M  : 38" x 27"</li>
+                            <li>L  : 40" x 28"</li>
+                            <li>XL : 42" x 29"</li>
+                        </ol><br>
+                        <strong>คำแนะนำในการดูแล :</strong><br>
+                        <ol class="list-decimal list-inside"></ol>
+                            <li>ซักด้วยน้ำเย็นหรืออุณหภูมิปกติ</li>
+                            <li>หลีกเลี่ยงการใช้น้ำยาฟอกขาว</li>
+                            <li>กลับด้านในก่อนซัก เพื่อถนอมลายพิมพ์</li>
+                            <li>รีดไฟอ่อน และไม่ควรรีดทับบนลายโดยตรง</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- ข้อมูลการสั่งซื้อ -->
+                <form class="md:w-1/2 md:pl-8 mt-6 md:mt-0 space-y-4" action="#" method="post" enctype="multipart/form-data">
+                    <div>
+                        <label class="block font-semibold mb-1" for="size">ขนาดเสื้อ</label>
+                        <select id="size" name="size" required class="w-full border rounded px-3 py-2">
+                            <option value="">เลือกขนาด</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="color">สี</label>
+                        <select id="color" name="color" required class="w-full border rounded px-3 py-2">
+                            <option value="">เลือกสี</option>
+                            <option value="white">ขาว</option>
+                            <option value="black">ครีม</option>
+                            <option value="blue">น้ำเงิน</option>
+                            <option value="blue">ดำ</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="quantity">จำนวน</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="fullname">ชื่อ-นามสกุล</label>
+                        <input type="text" id="fullname" name="fullname" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="address">ที่อยู่</label>
+                        <textarea id="address" name="address" rows="2" required class="w-full border rounded px-3 py-2"></textarea>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required class="w-full border rounded px-3 py-2" placeholder="0XXXXXXXXX">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="delivery">วิธีจัดส่ง</label>
+                        <select id="delivery" name="delivery" required class="w-full border rounded px-3 py-2">
+                            <option value="">เลือกวิธีจัดส่ง</option>
+                            <option value="ems">EMS (+40 บาท)</option>
+                            <option value="pickup">รับด้วยตัวเอง</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="payment">ช่องทางการชำระเงิน</label>
+                        <select id="payment" name="payment" required class="w-full border rounded px-3 py-2">
+                            <option value="">เลือกช่องทาง</option>
+                            <option value="bank">โอนผ่านธนาคาร</option>
+                            <option value="promptpay">PromptPay</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="slip">แนบรูปสลิป</label>
+                        <input type="file" id="slip" name="slip" accept="image/*" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1" for="date">วัน/เดือน/ปี ที่โอน</label>
+                        <input type="date" id="date" name="date" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 text-white py-2 rounded hover:bg-blue-700 transition">สั่งซื้อ</button>
+                </form>
+            </div>
+        </div>
+        <div class="mb-10"></div>
+    </main>
+    <footer>
+        @ 2025 COMPUTER SCIENCE MJU 
+    </footer> 
+</body>
+</html>

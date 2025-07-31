@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <meta name="author" content="monthakan thepsit">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CS STORE LOG IN</title>
+    <link rel="stylesheet" href="/form.css/cs-form-style.css">
+</head>
+
+<body>
+    <header>
+        <!-- หัวข้อ -->
+    <div class="div1 flex-col md:flex-row md:items-center md:justify-between">
+         <h1 class="cs-store text-4xl flex items-center space-x-4">
+            CS STORE
+            <img src="/image/logo.png" alt="logo" width="70" height="70">
+        </h1>
+    </div>
+    </header>
+
+    <main class="w-full mt-20 mb-5 px-4">
+        <div class="div4 overflow-x-auto rounded-lg shadow-md p-6 w-full max-w-sm md:max-w-xl mx-auto mt-8 block">
+            <form action="index_cs-store.html" method="post">
+                <h1 class="text-4xl">Log in</h1><br>
+                <label for="email" class="text-2xl">E-mail :</label>
+                <input type="text" id="email" name="email" class="rounded mb-4" required><br>
+                <label for="password" class="text-2xl ">Password :</label>
+                <input type="password" id="password" name="password" class="rounded mb-4" required><br>
+
+                <button type="submit" class="button1 text-xl hover:bg-sky-600">Log in</button><br>
+
+                <h1 class="mt-6">-----------------------------------</h1><br>
+
+                <a href="log-in-admin-no.html" class="text-xl text-gray-500 hover:text-red-500">Admin</a>
+            </form>
+        </div>
+    </main>
+
+    
+
+    <footer  >
+        @ 2025 COMPUTER SCIENCE MJU 
+    </footer>
+</body>
+</html>

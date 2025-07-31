@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <meta name="author" content="monthakan thepsit">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CS STORE</title>
+    <link rel="stylesheet" href="/form.css/cs-form-style.css">
+</head>
+
+<body>
+    <header>
+    <!-- หัวข้อ แบบปกติ-->
+    <div class="div1 flex-col md:flex-row md:items-center md:justify-between">
+        <a class="cs-store text-4xl flex items-center space-x" href="index_cs-store.html">
+            <span>CS STORE</span>
+            <img src="/image/logo.png" alt="logo" width="70" height="70">
+        </a>
+        <a class="log-out text-xl  hidden md:flex" href="log-in.html">Log out</a>
+    </div>
+    
+    <!-- หัวข้อเมนู --> 
+    <nav class="p-4 relative ">
+        <div class="relative flex items-center justify-between">
+        <!-- ช่องค้นหา -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <form class="flex-1 flex justify-start ml-2 mr-4 md:flex" action="#" method="post">
+            <input type="text" name="search" placeholder="search..."
+            class="border border-gray-00 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-800 w-40 md:w-64"/>
+            <button type="submit" class="ml-1 px-2 bg-blue-900 text-white rounded-lg hover:bg-blue-500 transition">
+                ค้นหา
+            </button>
+        <!-- มือถือ --> 
+        </form>
+        <!-- ปุ่มแฮมเบอร์เกอร์ -->
+        <label for="menu-toggle" class="md:hidden cursor-pointer z-50 relative">
+            <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </label>
+        <!-- ปุ่มปิดเมนู (X) -->
+        <label for="menu-toggle" 
+            class="fixed top-6 right-6 z-[101] bg-white/90 rounded-full p-2 shadow-lg cursor-pointer transition-all duration-300 opacity-0 pointer-events-none
+            peer-checked:opacity-100 peer-checked:pointer-events-auto md:hidden">
+            <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="6" y1="18" x2="18" y2="6"></line>
+            </svg>
+        </label>
+
+    <!-- เมนู -->
+        <ul class="mobile-menu fixed top-0 left-0 w-full bg-white p-6 space-y-4 text-xl shadow-md
+        -translate-y-full opacity-0 pointer-events-none transition-all duration-300 
+        peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:pointer-events-auto md:hidden z-50">
+            <li><a href="index_cs-store.html" class="block px-2 py-1 hover:bg-blue-100 rounded">หน้าแรก</a></li>
+            <li><a href="shirt.html" class="block px-2 py-1 hover:bg-blue-100 rounded">เสื้อ</a></li>
+            <li><a href="bag.html" class="block px-2 py-1 hover:bg-blue-100 rounded">กระเป๋า</a></li>
+            <li><a href="glass.html" class="block px-2 py-1 hover:bg-blue-100 rounded">แก้วน้ำ</a></li>
+            <li><a href="hat.html" class="block px-2 py-1 hover:bg-blue-100 rounded">หมวก</a></li>
+            <li><a href="umbrella.html" class="block px-2 py-1 hover:bg-blue-100 rounded">ร่ม</a></li>
+            <li><a href="brooch.html" class="block px-2 py-1 hover:bg-blue-100 rounded">เข็มกลัด</a></li>
+            <li><a href="book.html" class="block px-2 py-1 hover:bg-blue-100 rounded">สมุด</a></li>
+            <li><a href="pen.html" class="block px-2 py-1 hover:bg-blue-100 rounded">ปากกา</a></li>
+            <li><a href="admin.html" class="block px-2 py-1 hover:bg-blue-100 rounded">เพิ่มรายการสินค้า</a></li>
+            <li><a href="log-in.html" class="block px-2 py-1 hover:bg-blue-100 rounded">Log out</a></li>
+        </ul>
+
+
+    <!-- คอม -->  
+        <ul class="hidden md:flex items-center space-x-6 text-xl mt-3">
+          <li><a href="shirt.html" class="hover:text-blue-500 transition-colors duration-200">เสื้อ</a></li>
+          <li><a href="bag.html" class="hover:text-blue-500 transition-colors duration-200">กระเป๋า</a></li>
+          <li><a href="glass.html" class="hover:text-blue-500 transition-colors duration-200">แก้วน้ำ</a></li>
+          <li><a href="hat.html" class="hover:text-blue-500 transition-colors duration-200">หมวก</a></li>
+          <li><a href="umbrella.html" class="hover:text-blue-500 transition-colors duration-200">ร่ม</a></li>
+          <li><a href="brooch.html" class="hover:text-blue-500 transition-colors duration-200">เข็มกลัด</a></li>
+          <li><a href="book.html" class="hover:text-blue-500 transition-colors duration-200">สมุด</a></li>
+          <li><a href="pen.html" class="hover:text-blue-500 transition-colors duration-200">ปากกา</a></li>
+          <li><a href="admin.html" class="hover:text-blue-500 transition-colors duration-200">เพิ่มรายการสินค้า</a></li>
+        </ul>   
+    </nav>
+    </header>
+
+    <main>
+        <div class="flex flex-col items-center justify-center min-h-screen py-8">
+            <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-5xl">
+                <h2 class="text-2xl font-bold text-blue-900 mb-6 text-center">เพิ่มรายการสินค้าใหม่</h2>
+                <form action="#" method="post" enctype="multipart/form-data" class="space-y-5">
+                    <div>
+                        <label for="category" class="block font-semibold mb-1">ประเภทสินค้า</label>
+                        <select id="category" name="category" required class="w-full border rounded px-3 py-2">
+                            <option value="">เลือกประเภทสินค้า</option>
+                            <option value="shirt">เสื้อ</option>
+                            <option value="bag">กระเป๋า</option>
+                            <option value="glass">แก้วน้ำ</option>
+                            <option value="hat">หมวก</option>
+                            <option value="umbrella">ร่ม</option>
+                            <option value="brooch">เข็มกลัด</option>
+                            <option value="book">สมุด</option>
+                            <option value="pen">ปากกา</option>
+                            <option value="other">อื่นๆ</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name" class="block font-semibold mb-1">ชื่อสินค้า</label>
+                        <input type="text" id="name" name="name" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div>
+                        <label for="description" class="block font-semibold mb-1">รายละเอียดสินค้า</label>
+                        <textarea id="description" name="description" rows="3" required class="w-full border rounded px-3 py-2"></textarea>
+                    </div>
+                    <div>
+                        <label for="features" class="block font-semibold mb-1">คุณสมบัติ</label>
+                        <textarea id="features" name="features" rows="2" class="w-full border rounded px-3 py-2" placeholder="เช่น เขียนลื่น, กันน้ำ ฯลฯ"></textarea>
+                    </div>
+                    <div>
+                        <label for="sizes" class="block font-semibold mb-1">ขนาด</label>
+                        <input type="text" id="sizes" name="sizes" class="w-full border rounded px-3 py-2" placeholder="เช่น S, M, L, XL หรือ ขนาดอื่นๆ">
+                    </div>
+                    <div>
+                        <label for="care" class="block font-semibold mb-1">คำแนะนำในการดูแล</label>
+                        <textarea id="care" name="care" rows="2" class="w-full border rounded px-3 py-2"></textarea>
+                    </div>
+                    <div>
+                        <label for="price" class="block font-semibold mb-1">ราคา (บาท)</label>
+                        <input type="number" id="price" name="price" min="1" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div>
+                        <label for="stock" class="block font-semibold mb-1">จำนวนในคลัง</label>
+                        <input type="number" id="stock" name="stock" min="0" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <div>
+                        <label for="colors" class="block font-semibold mb-1">สี</label>
+                        <input type="text" id="colors" name="colors" class="w-full border rounded px-3 py-2" placeholder="เช่น ขาว, ดำ, น้ำเงิน">
+                    </div>
+                    <div>
+                        <label for="image" class="block font-semibold mb-1">รูปภาพสินค้า</label>
+                        <input type="file" id="image" name="image" accept="image/*" required class="w-full border rounded px-3 py-2">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 text-white py-2 rounded hover:bg-blue-700 transition">เพิ่มสินค้า</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        @ 2025 COMPUTER SCIENCE MJU 
+    </footer> 
+</body>
+</html>

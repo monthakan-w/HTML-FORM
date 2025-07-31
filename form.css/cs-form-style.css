@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Itim&family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Itim&family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "DM Serif Display","Itim";
+    font-weight: 400;
+   
+    
+/* หน้าแรก */
+    .div1 {
+        /* พื่นหลัง */
+        background-color: rgb(80, 132, 151);
+        height: 80px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 4px rgb(144, 144, 145) ;
+
+        /* ตัวหนังสือ */
+        color: rgb(255, 255, 255);
+        display: flex; /*เพื่อให้ส่วนล่างทำงาน */
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 40px;       
+    }
+
+
+    #menu-toggle:checked ~ .mobile-menu {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+        justify-self: start;
+    }
+
+
+    .div1 .log-out {
+        font-family: "Itim"; 
+        border: 1px rgb(255, 255, 255);
+        padding: 1px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: rgb(255, 255, 255);
+        color: rgb(32, 32, 99); 
+    }
+    
+    .div5 {
+        background-color:rgb(252, 252, 239);
+    }
+    
+    nav {
+        font-family: "Itim";
+        color:rgb(32, 32, 99) ;  
+        display: flex;
+        padding-right: 40px;
+        justify-content: flex-end ;
+        font-weight: bold;  
+        background-color:rgb(252, 252, 239) ; 
+    }
+
+    /* ปรับตามขนาดหน้าจอ */
+    @media (min-width: 768px) {
+        .slide1, .slide2, .slide3 { height: 20rem; }
+    }
+    @media (max-width: 767px) {
+        .slide1, .slide2, .slide3 { height: 16rem; }
+    }
+
+    /* ลื่อนสไลด์ */
+    #slide1:checked ~ div > .flex { transform: translateX(0%); }
+    #slide2:checked ~ div > .flex { transform: translateX(-100%); }
+    #slide3:checked ~ div > .flex { transform: translateX(-200%); }
+
+    /* จุดนำทาง */
+    #slide1:checked ~ .flex + .flex > label .dot1,
+    #slide1:checked ~ .flex + .flex > label:nth-child(1) .dot1 { background: rgb(80, 132, 151); }
+    #slide2:checked ~ .flex + .flex > label .dot2,
+    #slide2:checked ~ .flex + .flex > label:nth-child(2) .dot2 { background: rgb(80, 132, 151); }
+    #slide3:checked ~ .flex + .flex > label .dot3,
+    #slide3:checked ~ .flex + .flex > label:nth-child(3) .dot3 { background: rgb(80, 132, 151); }
+
+
+/* หน้า log in */
+    .div4 {
+        font-family: "Itim";
+        color:rgb(32, 32, 99);
+        background-color: rgb(236, 236, 237);
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .button1{
+        background-color: rgb(32, 32, 99);
+        border: 2px rgb(255, 255, 255);
+        border-radius: 5px;
+        color: white;
+        padding: 1px 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    /* .button1 :hover{
+        background-color: rgb(31, 145, 137);
+    } */
+
+
+
+/* ล่างสุด */
+    footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(80, 132, 151);;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 10px;
+        z-index: 100;
+    }
+}
