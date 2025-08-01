@@ -56,6 +56,46 @@ body{
         background-color:rgb(252, 252, 239) ; 
     }
 
+    .admin {
+        font-family: "Itim";
+    }
+
+    .bag {
+        font-family: "Itim";
+    }
+
+    .book {
+        font-family: "Itim";
+    }
+
+    .brooch {
+        font-family: "Itim";
+    }
+
+    .div5 {
+        font-family: "Itim";
+    }
+
+    .glass {
+        font-family: "Itim";
+    }
+
+    .hat {
+        font-family: "Itim";
+    }
+
+    .pen {
+        font-family: "Itim";
+    }
+
+    .shirt {
+        font-family: "Itim";
+    }
+
+    .umbrella {
+        font-family: "Itim";
+    }
+
     /* ปรับตามขนาดหน้าจอ */
     @media (min-width: 768px) {
         .slide1, .slide2, .slide3 { height: 20rem; }
